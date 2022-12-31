@@ -1,0 +1,99 @@
+Sep-26 16:27:26.223 [main] DEBUG nextflow.cli.Launcher - $> nextflow run my_pipeline.nf -with-report nextflow_report.html -with-dag flowchart.pdf --SRA SRR20851170,SRR20851171
+Sep-26 16:27:26.343 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.04.5
+Sep-26 16:27:26.455 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Sep-26 16:27:26.479 [main] INFO  nextflow.cli.CmdRun - Launching `my_pipeline.nf` [distracted_cantor] DSL2 - revision: 49f2351b60
+Sep-26 16:27:26.496 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/silenos/.nextflow/plugins; core-plugins: nf-amazon@1.7.2,nf-azure@0.13.2,nf-console@1.0.3,nf-ga4gh@1.0.3,nf-google@1.1.4,nf-sqldb@0.4.0,nf-tower@1.4.0
+Sep-26 16:27:26.498 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Sep-26 16:27:26.513 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Sep-26 16:27:26.514 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Sep-26 16:27:26.519 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Sep-26 16:27:26.535 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Sep-26 16:27:26.607 [main] DEBUG nextflow.Session - Session uuid: 84b79133-24cf-490c-ace1-915594e660fd
+Sep-26 16:27:26.607 [main] DEBUG nextflow.Session - Run name: distracted_cantor
+Sep-26 16:27:26.609 [main] DEBUG nextflow.Session - Executor pool size: 8
+Sep-26 16:27:26.646 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.04.5 build 5708
+  Created: 15-07-2022 16:09 UTC (19:09 MSD)
+  System: Linux 5.4.0-125-generic
+  Runtime: Groovy 3.0.10 on OpenJDK 64-Bit Server VM 11.0.16+8-post-Ubuntu-0ubuntu120.04
+  Encoding: UTF-8 (UTF-8)
+  Process: 948838@silenos-ThinkPad-E480 [127.0.1.1]
+  CPUs: 8 - Mem: 31.3 GB (13.9 GB) - Swap: 2 GB (1.9 GB)
+Sep-26 16:27:26.666 [main] DEBUG nextflow.Session - Work-dir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work [ext2/ext3]
+Sep-26 16:27:26.666 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/bin
+Sep-26 16:27:26.676 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Sep-26 16:27:26.690 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Sep-26 16:27:26.725 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Sep-26 16:27:26.736 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Sep-26 16:27:26.960 [main] DEBUG nextflow.Session - Session start invoked
+Sep-26 16:27:27.795 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Sep-26 16:27:27.815 [main] INFO  nextflow.Nextflow - 
+Sep-26 16:27:27.816 [main] INFO  nextflow.Nextflow -   Q U A L I T Y   C O N T R O L  
+Sep-26 16:27:27.816 [main] INFO  nextflow.Nextflow - =================================
+Sep-26 16:27:27.816 [main] INFO  nextflow.Nextflow - SRA number         : [SRR20851170, SRR20851171]
+Sep-26 16:27:27.817 [main] INFO  nextflow.Nextflow - Results location   : results/
+Sep-26 16:27:27.954 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Sep-26 16:27:27.954 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-26 16:27:27.960 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Sep-26 16:27:27.966 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=31.3 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Sep-26 16:27:28.091 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Sep-26 16:27:28.091 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-26 16:27:28.122 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Sep-26 16:27:28.123 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-26 16:27:28.127 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: DownloadFastQ, QC, MultiQC
+Sep-26 16:27:28.128 [main] DEBUG nextflow.Session - Ignite dataflow network (4)
+Sep-26 16:27:28.129 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DownloadFastQ
+Sep-26 16:27:28.130 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > QC
+Sep-26 16:27:28.130 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MultiQC
+Sep-26 16:27:28.131 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Sep-26 16:27:28.131 [main] DEBUG nextflow.Session - Session await
+Sep-26 16:27:28.299 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-26 16:27:28.304 [Task submitter] INFO  nextflow.Session - [41/3a843b] Submitted process > DownloadFastQ (2)
+Sep-26 16:27:28.323 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-26 16:27:28.325 [Task submitter] INFO  nextflow.Session - [25/6bbc69] Submitted process > DownloadFastQ (1)
+Sep-26 16:28:14.694 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: DownloadFastQ (1); status: COMPLETED; exit: 0; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/25/6bbc69f99ef2f38949f6b4377f14ec]
+Sep-26 16:28:14.761 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'DownloadFastQ (1)'
+
+Caused by:
+  Missing output file(s) `SRR20851170/*` expected by process `DownloadFastQ (1)`
+
+Command executed:
+
+  fasterq-dump SRR20851170 -O SRR20851170/
+
+Command exit status:
+  0
+
+Command output:
+  (empty)
+
+Command error:
+  spots read      : 135,014
+  reads read      : 270,028
+  reads written   : 270,028
+
+Work dir:
+  /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/25/6bbc69f99ef2f38949f6b4377f14ec
+
+Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
+Sep-26 16:28:14.785 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Missing output file(s) `SRR20851170/*` expected by process `DownloadFastQ (1)`
+Sep-26 16:28:14.799 [Task monitor] DEBUG nextflow.Session - The following nodes are still active:
+[process] QC
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: x
+  port 1: (cntrl) -     ; channel: $
+
+[process] MultiQC
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: x
+  port 1: (cntrl) -     ; channel: $
+
+Sep-26 16:28:14.803 [main] DEBUG nextflow.Session - Session await > all process finished
+Sep-26 16:28:14.803 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Sep-26 16:28:14.811 [main] WARN  n.processor.TaskPollingMonitor - Killing running tasks (1)
+Sep-26 16:28:14.823 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=1; succeedDuration=0ms; failedDuration=46.3s; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=2; peakMemory=0; ]
+Sep-26 16:28:14.823 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+Sep-26 16:28:14.870 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  [{"cpuUsage":{"mean":12.1,"min":12.1,"q1":12.1,"q2":12.1,"q3":12.1,"max":12.1,"minLabel":"DownloadFastQ (1)","maxLabel":"DownloadFastQ (1)","q1Label":"DownloadFastQ (1)","q2Label":"DownloadFastQ (1)","q3Label":"DownloadFastQ (1)"},"process":"DownloadFastQ","mem":{"mean":93847552,"min":93847552,"q1":93847552,"q2":93847552,"q3":93847552,"max":93847552,"minLabel":"DownloadFastQ (1)","maxLabel":"DownloadFastQ (1)","q1Label":"DownloadFastQ (1)","q2Label":"DownloadFastQ (1)","q3Label":"DownloadFastQ (1)"},"memUsage":null,"timeUsage":null,"vmem":{"mean":1094291456,"min":1094291456,"q1":1094291456,"q2":1094291456,"q3":1094291456,"max":1094291456,"minLabel":"DownloadFastQ (1)","maxLabel":"DownloadFastQ (1)","q1Label":"DownloadFastQ (1)","q2Label":"DownloadFastQ (1)","q3Label":"DownloadFastQ (1)"},"reads":{"mean":1687764,"min":1687764,"q1":1687764,"q2":1687764,"q3":1687764,"max":1687764,"minLabel":"DownloadFastQ (1)","maxLabel":"DownloadFastQ (1)","q1Label":"DownloadFastQ (1)","q2Label":"DownloadFastQ (1)","q3Label":"DownloadFastQ (1)"},"cpu":{"mean":12.1,"min":12.1,"q1":12.1,"q2":12.1,"q3":12.1,"max":12.1,"minLabel":"DownloadFastQ (1)","maxLabel":"DownloadFastQ (1)","q1Label":"DownloadFastQ (1)","q2Label":"DownloadFastQ (1)","q3Label":"DownloadFastQ (1)"},"time":{"mean":46281,"min":46281,"q1":46281,"q2":46281,"q3":46281,"max":46281,"minLabel":"DownloadFastQ (1)","maxLabel":"DownloadFastQ (1)","q1Label":"DownloadFastQ (1)","q2Label":"DownloadFastQ (1)","q3Label":"DownloadFastQ (1)"},"writes":{"mean":179573213,"min":179573213,"q1":179573213,"q2":179573213,"q3":179573213,"max":179573213,"minLabel":"DownloadFastQ (1)","maxLabel":"DownloadFastQ (1)","q1Label":"DownloadFastQ (1)","q2Label":"DownloadFastQ (1)","q3Label":"DownloadFastQ (1)"}}]
+Sep-26 16:28:15.615 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Sep-26 16:28:15.631 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

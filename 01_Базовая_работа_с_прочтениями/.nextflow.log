@@ -1,0 +1,192 @@
+Sep-27 11:45:52.681 [main] DEBUG nextflow.cli.Launcher - $> nextflow run my_pipeline.nf --SRA SRR6410608,SRR6410603 -with-report nextflow_report.html -with-dag flowchart.pdf
+Sep-27 11:45:52.816 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.04.5
+Sep-27 11:45:52.921 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Sep-27 11:45:52.940 [main] INFO  nextflow.cli.CmdRun - Launching `my_pipeline.nf` [desperate_tuckerman] DSL2 - revision: 585086fff6
+Sep-27 11:45:52.953 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/silenos/.nextflow/plugins; core-plugins: nf-amazon@1.7.2,nf-azure@0.13.2,nf-console@1.0.3,nf-ga4gh@1.0.3,nf-google@1.1.4,nf-sqldb@0.4.0,nf-tower@1.4.0
+Sep-27 11:45:52.955 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Sep-27 11:45:52.966 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Sep-27 11:45:52.967 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Sep-27 11:45:52.971 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Sep-27 11:45:52.985 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Sep-27 11:45:53.043 [main] DEBUG nextflow.Session - Session uuid: b65588c8-516d-4895-92d2-da499938a850
+Sep-27 11:45:53.043 [main] DEBUG nextflow.Session - Run name: desperate_tuckerman
+Sep-27 11:45:53.045 [main] DEBUG nextflow.Session - Executor pool size: 8
+Sep-27 11:45:53.083 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.04.5 build 5708
+  Created: 15-07-2022 16:09 UTC (19:09 MSD)
+  System: Linux 5.4.0-126-generic
+  Runtime: Groovy 3.0.10 on OpenJDK 64-Bit Server VM 11.0.16+8-post-Ubuntu-0ubuntu120.04
+  Encoding: UTF-8 (UTF-8)
+  Process: 502853@silenos-ThinkPad-E480 [127.0.1.1]
+  CPUs: 8 - Mem: 31.3 GB (22.7 GB) - Swap: 2 GB (1.9 GB)
+Sep-27 11:45:53.104 [main] DEBUG nextflow.Session - Work-dir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work [ext2/ext3]
+Sep-27 11:45:53.104 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/bin
+Sep-27 11:45:53.112 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Sep-27 11:45:53.124 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Sep-27 11:45:53.162 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Sep-27 11:45:53.176 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Sep-27 11:45:55.011 [main] DEBUG nextflow.Session - Session start invoked
+Sep-27 11:45:55.913 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Sep-27 11:45:55.939 [main] INFO  nextflow.Nextflow - 
+Sep-27 11:45:55.939 [main] INFO  nextflow.Nextflow -   Q U A L I T Y   C O N T R O L  
+Sep-27 11:45:55.939 [main] INFO  nextflow.Nextflow - =================================
+Sep-27 11:45:55.940 [main] INFO  nextflow.Nextflow - SRA number         : [SRR6410608, SRR6410603]
+Sep-27 11:45:55.940 [main] INFO  nextflow.Nextflow - Results location   : results/
+Sep-27 11:45:56.110 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Sep-27 11:45:56.110 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-27 11:45:56.115 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Sep-27 11:45:56.121 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=31.3 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Sep-27 11:45:56.229 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Sep-27 11:45:56.229 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-27 11:45:56.271 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Sep-27 11:45:56.271 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-27 11:45:56.277 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: DownloadFastQ, QC, MultiQC
+Sep-27 11:45:56.279 [main] DEBUG nextflow.Session - Ignite dataflow network (4)
+Sep-27 11:45:56.279 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DownloadFastQ
+Sep-27 11:45:56.280 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > QC
+Sep-27 11:45:56.281 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MultiQC
+Sep-27 11:45:56.281 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Sep-27 11:45:56.281 [main] DEBUG nextflow.Session - Session await
+Sep-27 11:45:56.446 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-27 11:45:56.451 [Task submitter] INFO  nextflow.Session - [10/b825af] Submitted process > DownloadFastQ (1)
+Sep-27 11:45:56.464 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-27 11:45:56.465 [Task submitter] INFO  nextflow.Session - [59/7d3ded] Submitted process > DownloadFastQ (2)
+Sep-27 11:50:56.328 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 11:55:56.335 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 12:00:56.413 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 12:05:56.453 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 12:10:56.468 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 12:15:56.532 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 12:20:56.592 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 12:25:56.679 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 12:30:56.747 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 12:35:56.839 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 12:40:56.879 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 12:45:56.916 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 12:50:57.013 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 12:55:57.044 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 13:00:57.088 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 13:05:57.108 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 13:10:57.121 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 13:15:57.184 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 13:20:57.234 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 13:25:57.271 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 13:30:57.324 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 13:35:57.339 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 13:40:57.435 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 13:45:57.475 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 13:50:57.553 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 13:55:57.559 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: DownloadFastQ (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 13:59:58.849 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: DownloadFastQ (1); status: COMPLETED; exit: 0; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/10/b825afdd1432b4efe5197f6fd9355a]
+Sep-27 13:59:58.908 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-27 13:59:58.909 [Task submitter] INFO  nextflow.Session - [16/47aaf2] Submitted process > QC (1)
+Sep-27 14:00:57.586 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: DownloadFastQ (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+~> TaskHandler[id: 3; name: QC (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/16/47aaf2a1817e376e56d2093587b015]
+Sep-27 14:03:00.042 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: DownloadFastQ (2); status: COMPLETED; exit: 0; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/59/7d3ded9a0f4ccdf220260607a33c34]
+Sep-27 14:03:00.090 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-27 14:03:00.091 [Task submitter] INFO  nextflow.Session - [8b/19bae8] Submitted process > QC (2)
+Sep-27 14:05:57.598 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: QC (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/16/47aaf2a1817e376e56d2093587b015]
+~> TaskHandler[id: 4; name: QC (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/8b/19bae80c575c5caa1bf41833ee748a]
+Sep-27 14:10:57.685 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: QC (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/16/47aaf2a1817e376e56d2093587b015]
+~> TaskHandler[id: 4; name: QC (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/8b/19bae80c575c5caa1bf41833ee748a]
+Sep-27 14:15:57.783 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: QC (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/16/47aaf2a1817e376e56d2093587b015]
+~> TaskHandler[id: 4; name: QC (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/8b/19bae80c575c5caa1bf41833ee748a]
+Sep-27 14:20:57.854 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: QC (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/16/47aaf2a1817e376e56d2093587b015]
+~> TaskHandler[id: 4; name: QC (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/8b/19bae80c575c5caa1bf41833ee748a]
+Sep-27 14:25:57.869 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: QC (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/16/47aaf2a1817e376e56d2093587b015]
+~> TaskHandler[id: 4; name: QC (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/8b/19bae80c575c5caa1bf41833ee748a]
+Sep-27 14:30:57.904 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: QC (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/16/47aaf2a1817e376e56d2093587b015]
+~> TaskHandler[id: 4; name: QC (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/8b/19bae80c575c5caa1bf41833ee748a]
+Sep-27 14:35:57.941 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: QC (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/16/47aaf2a1817e376e56d2093587b015]
+~> TaskHandler[id: 4; name: QC (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/8b/19bae80c575c5caa1bf41833ee748a]
+Sep-27 14:40:57.977 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: QC (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/16/47aaf2a1817e376e56d2093587b015]
+~> TaskHandler[id: 4; name: QC (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/8b/19bae80c575c5caa1bf41833ee748a]
+Sep-27 14:45:58.065 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: QC (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/16/47aaf2a1817e376e56d2093587b015]
+~> TaskHandler[id: 4; name: QC (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/8b/19bae80c575c5caa1bf41833ee748a]
+Sep-27 14:50:58.134 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: QC (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/16/47aaf2a1817e376e56d2093587b015]
+~> TaskHandler[id: 4; name: QC (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/8b/19bae80c575c5caa1bf41833ee748a]
+Sep-27 14:55:58.188 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: QC (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/16/47aaf2a1817e376e56d2093587b015]
+~> TaskHandler[id: 4; name: QC (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/8b/19bae80c575c5caa1bf41833ee748a]
+Sep-27 15:00:58.223 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: QC (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/16/47aaf2a1817e376e56d2093587b015]
+~> TaskHandler[id: 4; name: QC (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/8b/19bae80c575c5caa1bf41833ee748a]
+Sep-27 15:05:58.270 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: QC (1); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/16/47aaf2a1817e376e56d2093587b015]
+~> TaskHandler[id: 4; name: QC (2); status: RUNNING; exit: -; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/8b/19bae80c575c5caa1bf41833ee748a]
+Sep-27 15:06:20.315 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: QC (1); status: COMPLETED; exit: 0; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/16/47aaf2a1817e376e56d2093587b015]
+Sep-27 15:06:21.734 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: QC (2); status: COMPLETED; exit: 0; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/8b/19bae80c575c5caa1bf41833ee748a]
+Sep-27 15:06:21.776 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-27 15:06:21.777 [Task submitter] INFO  nextflow.Session - [c2/13bae3] Submitted process > MultiQC
+Sep-27 15:06:49.344 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: MultiQC; status: COMPLETED; exit: 0; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/c2/13bae344ad3e3dc78dec6347fcc1b1]
+Sep-27 15:06:49.347 [main] DEBUG nextflow.Session - Session await > all process finished
+Sep-27 15:06:49.348 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Sep-27 15:06:49.355 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=5; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=6h 41m 13s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=2; peakMemory=0; ]
+Sep-27 15:06:49.355 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+Sep-27 15:06:49.389 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  [{"cpuUsage":{"mean":7.3,"min":7.3,"q1":7.3,"q2":7.3,"q3":7.3,"max":7.3,"minLabel":"DownloadFastQ (1)","maxLabel":"DownloadFastQ (2)","q1Label":"DownloadFastQ (1)","q2Label":"DownloadFastQ (1)","q3Label":"DownloadFastQ (1)"},"process":"DownloadFastQ","mem":{"mean":499765248,"min":497094656,"q1":498429952,"q2":499765248,"q3":501100544,"max":502435840,"minLabel":"DownloadFastQ (1)","maxLabel":"DownloadFastQ (2)","q1Label":"DownloadFastQ (1)","q2Label":"DownloadFastQ (1)","q3Label":"DownloadFastQ (1)"},"memUsage":null,"timeUsage":null,"vmem":{"mean":1361948672,"min":1359818752,"q1":1360883712,"q2":1361948672,"q3":1363013632,"max":1364078592,"minLabel":"DownloadFastQ (2)","maxLabel":"DownloadFastQ (1)","q1Label":"DownloadFastQ (2)","q2Label":"DownloadFastQ (2)","q3Label":"DownloadFastQ (2)"},"reads":{"mean":24766509713,"min":24757224381,"q1":24761867047,"q2":24766509713,"q3":24771152379,"max":24775795045,"minLabel":"DownloadFastQ (1)","maxLabel":"DownloadFastQ (2)","q1Label":"DownloadFastQ (1)","q2Label":"DownloadFastQ (1)","q3Label":"DownloadFastQ (1)"},"cpu":{"mean":7.3,"min":7.3,"q1":7.3,"q2":7.3,"q3":7.3,"max":7.3,"minLabel":"DownloadFastQ (1)","maxLabel":"DownloadFastQ (2)","q1Label":"DownloadFastQ (1)","q2Label":"DownloadFastQ (1)","q3Label":"DownloadFastQ (1)"},"time":{"mean":8132770,"min":8042017,"q1":8087393.5,"q2":8132770,"q3":8178146.5,"max":8223523,"minLabel":"DownloadFastQ (1)","maxLabel":"DownloadFastQ (2)","q1Label":"DownloadFastQ (1)","q2Label":"DownloadFastQ (1)","q3Label":"DownloadFastQ (1)"},"writes":{"mean":62049508746,"min":61822722606,"q1":61936115676,"q2":62049508746,"q3":62162901816,"max":62276294886,"minLabel":"DownloadFastQ (1)","maxLabel":"DownloadFastQ (2)","q1Label":"DownloadFastQ (1)","q2Label":"DownloadFastQ (1)","q3Label":"DownloadFastQ (1)"}},{"cpuUsage":{"mean":25.05,"min":25,"q1":25.03,"q2":25.05,"q3":25.08,"max":25.1,"minLabel":"QC (1)","maxLabel":"QC (2)","q1Label":"QC (1)","q2Label":"QC (1)","q3Label":"QC (1)"},"process":"QC","mem":{"mean":372824064,"min":364187648,"q1":368505856,"q2":372824064,"q3":377142272,"max":381460480,"minLabel":"QC (2)","maxLabel":"QC (1)","q1Label":"QC (2)","q2Label":"QC (2)","q3Label":"QC (2)"},"memUsage":null,"timeUsage":null,"vmem":{"mean":11898146816,"min":11898146816,"q1":11898146816,"q2":11898146816,"q3":11898146816,"max":11898146816,"minLabel":"QC (1)","maxLabel":"QC (2)","q1Label":"QC (1)","q2Label":"QC (1)","q3Label":"QC (1)"},"reads":{"mean":29680613082.5,"min":29669769045,"q1":29675191063.75,"q2":29680613082.5,"q3":29686035101.25,"max":29691457120,"minLabel":"QC (1)","maxLabel":"QC (2)","q1Label":"QC (1)","q2Label":"QC (1)","q3Label":"QC (1)"},"cpu":{"mean":25.05,"min":25,"q1":25.03,"q2":25.05,"q3":25.08,"max":25.1,"minLabel":"QC (1)","maxLabel":"QC (2)","q1Label":"QC (1)","q2Label":"QC (1)","q3Label":"QC (1)"},"time":{"mean":3890175,"min":3801525,"q1":3845850,"q2":3890175,"q3":3934500,"max":3978825,"minLabel":"QC (2)","maxLabel":"QC (1)","q1Label":"QC (2)","q2Label":"QC (2)","q3Label":"QC (2)"},"writes":{"mean":4562499.5,"min":4512199,"q1":4537349.25,"q2":4562499.5,"q3":4587649.75,"max":4612800,"minLabel":"QC (1)","maxLabel":"QC (2)","q1Label":"QC (1)","q2Label":"QC (1)","q3Label":"QC (1)"}},{"cpuUsage":{"mean":23.1,"min":23.1,"q1":23.1,"q2":23.1,"q3":23.1,"max":23.1,"minLabel":"MultiQC","maxLabel":"MultiQC","q1Label":"MultiQC","q2Label":"MultiQC","q3Label":"MultiQC"},"process":"MultiQC","mem":{"mean":100798464,"min":100798464,"q1":100798464,"q2":100798464,"q3":100798464,"max":100798464,"minLabel":"MultiQC","maxLabel":"MultiQC","q1Label":"MultiQC","q2Label":"MultiQC","q3Label":"MultiQC"},"memUsage":null,"timeUsage":null,"vmem":{"mean":613371904,"min":613371904,"q1":613371904,"q2":613371904,"q3":613371904,"max":613371904,"minLabel":"MultiQC","maxLabel":"MultiQC","q1Label":"MultiQC","q2Label":"MultiQC","q3Label":"MultiQC"},"reads":{"mean":178038884,"min":178038884,"q1":178038884,"q2":178038884,"q3":178038884,"max":178038884,"minLabel":"MultiQC","maxLabel":"MultiQC","q1Label":"MultiQC","q2Label":"MultiQC","q3Label":"MultiQC"},"cpu":{"mean":23.1,"min":23.1,"q1":23.1,"q2":23.1,"q3":23.1,"max":23.1,"minLabel":"MultiQC","maxLabel":"MultiQC","q1Label":"MultiQC","q2Label":"MultiQC","q3Label":"MultiQC"},"time":{"mean":27347,"min":27347,"q1":27347,"q2":27347,"q3":27347,"max":27347,"minLabel":"MultiQC","maxLabel":"MultiQC","q1Label":"MultiQC","q2Label":"MultiQC","q3Label":"MultiQC"},"writes":{"mean":2717447,"min":2717447,"q1":2717447,"q2":2717447,"q3":2717447,"max":2717447,"minLabel":"MultiQC","maxLabel":"MultiQC","q1Label":"MultiQC","q2Label":"MultiQC","q3Label":"MultiQC"}}]
+Sep-27 15:06:51.434 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Sep-27 15:06:51.512 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

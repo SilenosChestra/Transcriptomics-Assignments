@@ -1,0 +1,63 @@
+Sep-27 11:43:13.156 [main] DEBUG nextflow.cli.Launcher - $> nextflow run my_pipeline.nf --SRA SRR20851170
+Sep-27 11:43:13.291 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.04.5
+Sep-27 11:43:13.401 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Sep-27 11:43:13.421 [main] INFO  nextflow.cli.CmdRun - Launching `my_pipeline.nf` [hungry_ardinghelli] DSL2 - revision: 585086fff6
+Sep-27 11:43:13.435 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/silenos/.nextflow/plugins; core-plugins: nf-amazon@1.7.2,nf-azure@0.13.2,nf-console@1.0.3,nf-ga4gh@1.0.3,nf-google@1.1.4,nf-sqldb@0.4.0,nf-tower@1.4.0
+Sep-27 11:43:13.437 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Sep-27 11:43:13.452 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Sep-27 11:43:13.453 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Sep-27 11:43:13.459 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Sep-27 11:43:13.473 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Sep-27 11:43:13.544 [main] DEBUG nextflow.Session - Session uuid: 5ecc11ce-a039-4678-9e25-a536db1248d1
+Sep-27 11:43:13.544 [main] DEBUG nextflow.Session - Run name: hungry_ardinghelli
+Sep-27 11:43:13.546 [main] DEBUG nextflow.Session - Executor pool size: 8
+Sep-27 11:43:13.598 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.04.5 build 5708
+  Created: 15-07-2022 16:09 UTC (19:09 MSD)
+  System: Linux 5.4.0-126-generic
+  Runtime: Groovy 3.0.10 on OpenJDK 64-Bit Server VM 11.0.16+8-post-Ubuntu-0ubuntu120.04
+  Encoding: UTF-8 (UTF-8)
+  Process: 499730@silenos-ThinkPad-E480 [127.0.1.1]
+  CPUs: 8 - Mem: 31.3 GB (22.7 GB) - Swap: 2 GB (1.9 GB)
+Sep-27 11:43:13.627 [main] DEBUG nextflow.Session - Work-dir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work [ext2/ext3]
+Sep-27 11:43:13.636 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/bin
+Sep-27 11:43:13.647 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Sep-27 11:43:13.662 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Sep-27 11:43:13.694 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Sep-27 11:43:13.707 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Sep-27 11:43:13.898 [main] DEBUG nextflow.Session - Session start invoked
+Sep-27 11:43:14.587 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Sep-27 11:43:14.606 [main] INFO  nextflow.Nextflow - 
+Sep-27 11:43:14.606 [main] INFO  nextflow.Nextflow -   Q U A L I T Y   C O N T R O L  
+Sep-27 11:43:14.606 [main] INFO  nextflow.Nextflow - =================================
+Sep-27 11:43:14.607 [main] INFO  nextflow.Nextflow - SRA number         : [SRR20851170]
+Sep-27 11:43:14.607 [main] INFO  nextflow.Nextflow - Results location   : results/
+Sep-27 11:43:14.759 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Sep-27 11:43:14.759 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-27 11:43:14.766 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Sep-27 11:43:14.771 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=31.3 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Sep-27 11:43:14.915 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Sep-27 11:43:14.915 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-27 11:43:14.950 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Sep-27 11:43:14.950 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-27 11:43:14.961 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: DownloadFastQ, QC, MultiQC
+Sep-27 11:43:14.962 [main] DEBUG nextflow.Session - Ignite dataflow network (4)
+Sep-27 11:43:14.963 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DownloadFastQ
+Sep-27 11:43:14.964 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > QC
+Sep-27 11:43:14.965 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MultiQC
+Sep-27 11:43:14.967 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Sep-27 11:43:14.969 [main] DEBUG nextflow.Session - Session await
+Sep-27 11:43:16.960 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-27 11:43:16.967 [Task submitter] INFO  nextflow.Session - [5d/a2c6b8] Submitted process > DownloadFastQ (1)
+Sep-27 11:43:43.984 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: DownloadFastQ (1); status: COMPLETED; exit: 0; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/5d/a2c6b84736d3da682c87966aa01243]
+Sep-27 11:43:44.035 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-27 11:43:44.036 [Task submitter] INFO  nextflow.Session - [7a/307e01] Submitted process > QC (1)
+Sep-27 11:43:55.813 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: QC (1); status: COMPLETED; exit: 0; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/7a/307e014f2394962a55ebdeb75d6012]
+Sep-27 11:43:55.831 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-27 11:43:55.832 [Task submitter] INFO  nextflow.Session - [fe/7b9d86] Submitted process > MultiQC
+Sep-27 11:44:13.084 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: MultiQC; status: COMPLETED; exit: 0; error: -; workDir: /home/silenos/Programs/Bioinformatics/Transcriptomics/01_Базовая_работа_с_прочтениями/work/fe/7b9d86a52d9ba95451bff42df335a5]
+Sep-27 11:44:13.087 [main] DEBUG nextflow.Session - Session await > all process finished
+Sep-27 11:44:13.088 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Sep-27 11:44:13.096 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=3; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=55.9s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Sep-27 11:44:13.290 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Sep-27 11:44:13.317 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
